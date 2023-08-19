@@ -5,3 +5,7 @@ VALUES(true, 15, 'FOOD', CURRENT_DATE, nextval('product_seq'), 'Burger', 'Super 
 INSERT INTO product
 (is_active, price, product_type, created_date, id, "name", description)
 VALUES(true, 10, 'DRINK', CURRENT_DATE, nextval('product_seq'), 'Water', 'Refresh water');
+
+INSERT INTO product
+(is_active, price, product_type, created_date, id, "name", description)
+VALUES(false, 5, 'FOOD', CURRENT_DATE, nextval('product_seq'), 'Beef', 'A burger with a beef');

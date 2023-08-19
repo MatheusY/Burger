@@ -4,6 +4,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import org.jboss.resteasy.reactive.ResponseStatus;
 import org.mmatsubara.dto.ProductDTO;
 import org.mmatsubara.exception.NotFoundException;
 import org.mmatsubara.model.Product;
@@ -25,13 +26,14 @@ public class ProductController extends AbstractController {
         return convert(productService.find(query, sort, pageIndex, pageSize), ProductDTO.class);
     }
 
-    @DELETE
+    @GET
     @Path("{id}")
     public ProductDTO findById(@PathParam("id") Long id) throws NotFoundException {
         return convert(productService.findById(id), ProductDTO.class);
     }
 
     @POST
+    @ResponseStatus(201)
     public Long saveProduct(ProductDTO productDTO) {
         return productService.save(convert(productDTO, Product.class)).id;
     }
