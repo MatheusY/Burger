@@ -24,7 +24,7 @@ public class ProductServiceTest extends AbstractTest {
                 .when().get("/api/products")
                 .then()
                 .statusCode(200)
-                .body("size", equalTo(2));
+                .body("size", equalTo(3));
     }
 
     @Test
@@ -33,10 +33,10 @@ public class ProductServiceTest extends AbstractTest {
                 .when().get("/api/products/1")
                 .then()
                 .statusCode(200)
-                .body("name", equalTo("Burger"),
+                .body("name", equalTo("Hamburger"),
                         "price", equalTo(15.0F),
                         "productType", equalTo(ProductType.FOOD.toString()),
-                        "description", equalTo("Super Delicious burger"));
+                        "description", equalTo("Delicioso hamburger tradicional!"));
     }
 
     @Test
