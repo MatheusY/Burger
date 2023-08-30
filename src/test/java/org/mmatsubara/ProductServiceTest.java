@@ -45,7 +45,7 @@ public class ProductServiceTest extends AbstractTest {
                 .when().get("/api/products/10")
                 .then()
                 .statusCode(404)
-                .body("message", equalTo("Product doesn't not exist!"));
+                .body("message", equalTo("Product doesn't exist!"));
     }
 
     @SneakyThrows

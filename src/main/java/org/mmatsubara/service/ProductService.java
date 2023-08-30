@@ -23,7 +23,7 @@ public class ProductService implements IProductService {
     public Product findById(Long id) throws NotFoundException {
         List<Product> products = Product.find("id = ?1 AND isActive = true", id).list();
         if(products.isEmpty()) {
-            throw new NotFoundException("Product doesn't not exist!");
+            throw new NotFoundException("Product doesn't exist!");
         }
         return products.get(0);
     }
