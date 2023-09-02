@@ -35,7 +35,7 @@ public class UserController extends AbstractController {
 
     @PUT
     @Path("{id}")
-    public void updateUser(UserDTO userDTO) throws NotFoundException{
-        userService.update(convert(userDTO, User.class));
+    public void updateUser(@PathParam("id") Long id, UserDTO userDTO) throws NotFoundException{
+        userService.update(id, convert(userDTO, User.class));
     }
 }

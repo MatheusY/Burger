@@ -9,5 +9,5 @@ public interface IUserService {
 
     User save(User user) throws BusinessException;
 
-    void update(User user) throws NotFoundException;
+    void update(Long id, User user) throws NotFoundException;
 }

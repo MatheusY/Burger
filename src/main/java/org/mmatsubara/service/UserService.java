@@ -41,8 +41,8 @@ public class UserService implements IUserService {
 
     @Transactional
     @Override
-    public void update(User user) throws NotFoundException {
-        var persistedUser = findById(user.id);
+    public void update(Long id, User user) throws NotFoundException {
+        var persistedUser = findById(id);
         persistedUser.name = user.name;
     }
 }
