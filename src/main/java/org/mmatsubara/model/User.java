@@ -3,6 +3,8 @@ package org.mmatsubara.model;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "User_info")
 public class User extends PanacheEntityBase {
@@ -18,6 +20,9 @@ public class User extends PanacheEntityBase {
 
     @Column(length = 255, nullable = false, unique = true)
     public String email;
+
+    @Column(name = "created_date", nullable = false)
+    public LocalDateTime createdDate;
 
     @Column(name = "is_active")
     public boolean isActive;

@@ -15,24 +15,24 @@ INSERT INTO product
 VALUES(true, 17, 'FOOD', CURRENT_DATE, nextval('product_seq'), 'X-Salada', 'Hamburguer com bastante vegetais');
 
 INSERT INTO public.user_info
-(is_active, is_verified, id, "name", email)
-VALUES(true, true, nextval('user_seq'), 'Matheus', 'matheus.matsubara@gmail.com');
+(is_active, is_verified, id, "name", email, created_date)
+VALUES(true, true, nextval('user_seq'), 'Matheus', 'matheus.matsubara@gmail.com', CURRENT_DATE);
 
 INSERT INTO public.user_info
-(is_active, is_verified, id, "name", email)
-VALUES(true, true, nextval('user_seq'), 'Murilo', 'murilo@gmail.com');
+(is_active, is_verified, id, "name", email, created_date)
+VALUES(true, true, nextval('user_seq'), 'Murilo', 'murilo@gmail.com', CURRENT_DATE);
 
 INSERT INTO public.user_info
-(is_active, is_verified, id, "name", email)
-VALUES(true, true, nextval('user_seq'), 'Graca', 'graca@gmail.com');
+(is_active, is_verified, id, "name", email, created_date)
+VALUES(true, true, nextval('user_seq'), 'Graca', 'graca@gmail.com', CURRENT_DATE);
 
 INSERT INTO public.user_info
-(is_active, is_verified, id, "name", email)
-VALUES(true, true, nextval('user_seq'), 'Milton', 'milton@gmail.com');
+(is_active, is_verified, id, "name", email, created_date)
+VALUES(true, true, nextval('user_seq'), 'Milton', 'milton@gmail.com', CURRENT_DATE);
 
 INSERT INTO public.user_info
-(is_active, is_verified, id, "name", email)
-VALUES(false, false, nextval('user_seq'), 'mima', 'mima@gmail.com');
+(is_active, is_verified, id, "name", email, created_date)
+VALUES(false, false, nextval('user_seq'), 'mima', 'mima@gmail.com', CURRENT_DATE);
 
 INSERT INTO public.purchase_order
 (id, ordereddate, user_fk, order_status)
